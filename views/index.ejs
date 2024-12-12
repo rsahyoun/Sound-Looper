@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+<div class="container">
+    <h1>Sound Looper</h1>
+    
+    <div class="controls">
+        <button id="recordButton" class="btn">Record</button>
+        <button id="stopButton" class="btn" disabled>Stop</button>
+    </div>
+
+    <div class="tracks-container">
+        <h2>Recorded Tracks</h2>
+        <div class="tracks" id="tracksList">
+            <!-- Tracks will be added here dynamically -->
+        </div>
+    </div>
+
+    <div class="loop-controls">
+        <h2>Loop Settings</h2>
+        <div class="loop-settings">
+            <label for="bpm">BPM:</label>
+            <input type="number" id="bpm" value="120" min="60" max="200">
+            
+            <label for="loopLength">Loop Length (bars):</label>
+            <input type="number" id="loopLength" value="4" min="1" max="8">
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %> 
